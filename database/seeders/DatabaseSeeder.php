@@ -23,17 +23,18 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Create Categories
+// Create Categories
         $categories = [
-            ['name' => 'Marketing', 'description' => 'Marketing and brand management positions', 'icon' => '📢', 'order' => 1],
-            ['name' => 'Technology', 'description' => 'IT and software development roles', 'icon' => '💻', 'order' => 2],
-            ['name' => 'Finance', 'description' => 'Financial and accounting positions', 'icon' => '💰', 'order' => 3],
-            ['name' => 'Operations', 'description' => 'Operations and logistics roles', 'icon' => '⚙️', 'order' => 4],
-            ['name' => 'Human Resources', 'description' => 'HR and talent management', 'icon' => '👥', 'order' => 5],
-            ['name' => 'Sales', 'description' => 'Sales and business development', 'icon' => '💼', 'order' => 6],
+            ['name' => 'Marketing', 'description' => 'Marketing and brand management positions', 'icon' => 'megaphone', 'order' => 1],
+            ['name' => 'Technology', 'description' => 'IT and software development roles', 'icon' => 'computer', 'order' => 2],
+            ['name' => 'Finance', 'description' => 'Financial and accounting positions', 'icon' => 'currency-dollar', 'order' => 3],
+            ['name' => 'Operations', 'description' => 'Operations and logistics roles', 'icon' => 'cog', 'order' => 4],
+            ['name' => 'Human Resources', 'description' => 'HR and talent management', 'icon' => 'user-group', 'order' => 5],
+            ['name' => 'Sales', 'description' => 'Sales and business development', 'icon' => 'briefcase', 'order' => 6],
         ];
 
-        foreach ($categories as $categoryData) {
-            Category::create($categoryData);
+        foreach ($categories as $category) {
+            Category::create($category);
         }
 
         // Create Common Requirements

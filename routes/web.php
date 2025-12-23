@@ -19,6 +19,10 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::get('/jobs', JobList::class)->name('jobs.index');
     Route::get('/jobs/create', JobForm::class)->name('jobs.create');
     Route::get('/jobs/{jobId}/edit', JobForm::class)->name('jobs.edit');
+
+    Route::get('/categories', \App\Livewire\Admin\CategoryList::class)->name('categories.index');
+    Route::get('/categories/create', \App\Livewire\Admin\CategoryForm::class)->name('categories.create');
+    Route::get('/categories/{categoryId}/edit', \App\Livewire\Admin\CategoryForm::class)->name('categories.edit');
 });
 
 Route::view('dashboard', 'dashboard')

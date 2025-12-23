@@ -44,34 +44,31 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200">
-                @foreach($categories as $category)
-                <div class="group bg-white p-10 hover:bg-slate-50 transition-all duration-300">
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                        {{ $category->icon }}
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-slate-900 tracking-tight">
-                        {{ $category->name }}
-                    </h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed font-light">
-                        {{ $category->description }}
-                    </p>
-                    <div class="flex items-center justify-between pt-6 border-t border-slate-200">
-                        <span class="text-sm text-slate-500 font-medium">
-                            {{ $category->active_jobs_count }} Positions
-                        </span>
-                        <a href="/career?category={{ $category->id }}" 
-                           wire:navigate
-                           class="text-amber-500 font-semibold hover:text-amber-600 flex items-center gap-2 uppercase text-xs tracking-wider group-hover:gap-3 transition-all">
-                            View
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                @endforeach
-            </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    @foreach($categories as $category)
+    <div class="group bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <!-- Icon SVG -->
+        <div class="mb-4 text-amber-600">
+            {!! $category->renderIcon('w-12 h-12') !!}
+        </div>
+        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-amber-600 transition">
+            {{ $category->name }}
+        </h3>
+        <p class="text-gray-600 mb-4">{{ $category->description }}</p>
+        <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">{{ $category->active_jobs_count }} open positions</span>
+            <a href="/career?category={{ $category->id }}" 
+               wire:navigate
+               class="text-amber-600 font-semibold hover:text-amber-700 flex items-center group-hover:translate-x-2 transition">
+                View Jobs
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    @endforeach
+</div>
         </div>
     </section>
 
@@ -155,6 +152,9 @@
             </a>
         </div>
     </section>
+</div>
+<div class="hidden">
+    <p>Develop with ♥️ by erlangftsiesta</p>
 </div>
 
 <!-- <style>

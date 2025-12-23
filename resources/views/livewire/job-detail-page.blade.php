@@ -91,23 +91,59 @@
                 @endif
 
                 <!-- Job Description Section -->
-                @if($job->descriptions && count($job->descriptions) > 0)
-                <div class="bg-white border border-slate-200 p-10">
-                    <h2 class="text-2xl font-light text-slate-900 mb-8 pb-4 border-b border-slate-200 tracking-wide">
-                        Job Description
-                    </h2>
-                    <ul class="space-y-4">
-                        @foreach($job->descriptions as $index => $description)
-                        <li class="flex items-start gap-4">
-                            <span class="inline-flex items-center justify-center w-7 h-7 border border-slate-300 text-slate-700 text-xs font-light flex-shrink-0 mt-0.5">
-                                {{ $index + 1 }}
-                            </span>
-                            <span class="text-slate-700 font-light leading-relaxed">{{ $description }}</span>
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
+<!-- Job Description Section -->
+@if($job->descriptions && count($job->descriptions) > 0)
+<div class="bg-white border border-slate-200 p-10">
+    <h2 class="text-2xl font-light text-slate-900 mb-8 pb-4 border-b border-slate-200 tracking-wide">
+        Job Description
+    </h2>
+    <ul class="space-y-4">
+        @foreach($job->descriptions as $index => $description)
+        <li class="flex items-start gap-4">
+            <span class="inline-flex items-center justify-center w-7 h-7 border border-slate-300 text-slate-700 text-xs font-light flex-shrink-0 mt-0.5">
+                {{ $index + 1 }}
+            </span>
+            <span class="text-slate-700 font-light leading-relaxed">{{ $description }}</span>
+        </li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
+<!-- Important Notice Section -->
+<div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-500 p-10">
+    <div class="flex items-start gap-4 mb-6">
+        <svg class="w-8 h-8 text-amber-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+        </svg>
+        <div>
+            <h3 class="text-2xl font-light text-slate-900 mb-4 tracking-wide">Important Notice</h3>
+            <div class="space-y-3 text-slate-700 font-light leading-relaxed">
+                <p class="text-lg">
+                    <strong class="font-medium">This recruitment process is completely FREE OF CHARGE.</strong>
+                </p>
+                <p>
+                    We never ask for any payment, fees, or deposits at any stage of the recruitment process. 
+                    If anyone requests money from you claiming to represent our company, please report it immediately.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-6 pt-6 border-t border-amber-200">
+        <p class="text-slate-700 font-light mb-4 text-sm">
+            Encountered suspicious activity? Report it now:
+        </p>
+        <a href="https://wa.me/6281374565175?text=Saya%20ingin%20melaporkan%20dugaan%20penipuan%20terkait%20rekrutmen%20{{ urlencode($job->title) }}" 
+           target="_blank"
+           class="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 font-light tracking-wider uppercase text-sm hover:bg-red-700 transition-colors duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            Report Fraud Immediately
+        </a>
+    </div>
+</div>
             </div>
 
             <!-- Right Column: Sidebar -->

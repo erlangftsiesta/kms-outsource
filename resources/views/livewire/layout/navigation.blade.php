@@ -16,7 +16,7 @@ new class extends Component
     }
 }; ?>
 
-<nav x-data="{ open: false }" class="bg-white border-b border-slate-200" style="font-family: 'Montserrat', sans-serif;">
+<nav x-data="{ open: false }" class="sticky top-0 bg-white border-b border-slate-200" style="font-family: 'Montserrat', sans-serif;">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
@@ -36,6 +36,9 @@ new class extends Component
                         </x-nav-link>
                         <x-nav-link :href="route('admin.jobs.index')" :active="request()->routeIs('admin.jobs.*')" wire:navigate class="px-4 py-2 text-sm font-light tracking-wide text-slate-700 hover:text-amber-600 transition-colors duration-300 {{ request()->routeIs('admin.jobs.*') ? 'text-amber-600 font-medium' : '' }}">
                             {{ __('Jobs') }}
+                        </x-nav-link>
+                                                <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.*')" wire:navigate class="px-4 py-2 text-sm font-light tracking-wide text-slate-700 hover:text-amber-600 transition-colors duration-300 {{ request()->routeIs('admin.categories.*') ? 'text-amber-600 font-medium' : '' }}">
+                            {{ __('Categories') }}
                         </x-nav-link>
                     @else
                         <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate class="px-4 py-2 text-sm font-light tracking-wide text-slate-700 hover:text-amber-600 transition-colors duration-300 {{ request()->routeIs('home') ? 'text-amber-600 font-medium' : '' }}">
