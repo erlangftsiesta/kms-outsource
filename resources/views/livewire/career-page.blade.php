@@ -3,8 +3,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <!-- Redesigned header with Montserrat and elegant spacing -->
         <div class="mb-16 text-center border-b border-slate-200 pb-12">
-            <h1 class="text-5xl md:text-6xl font-light text-slate-900 mb-6 tracking-tight" style="font-family: 'Montserrat', sans-serif;">Career Opportunities</h1>
-            <p class="text-lg text-slate-600 font-light tracking-wide" style="font-family: 'Montserrat', sans-serif;">Discover Your Next Professional Chapter</p>
+            <h1 class="text-5xl md:text-6xl font-light text-slate-900 mb-6 tracking-tight" style="font-family: 'Montserrat', sans-serif;">Peluang Karir</h1>
+            <p class="text-lg text-slate-600 font-light tracking-wide" style="font-family: 'Montserrat', sans-serif;">Temukan Peluang Profesional Anda Selanjutnya</p>
         </div>
 
         <!-- Refined search and filters with clean, sharp styling -->
@@ -14,7 +14,7 @@
                 <input 
                     type="text" 
                     wire:model.live.debounce.300ms="search"
-                    placeholder="Search positions by title or keyword..."
+                    placeholder="Cari posisi berdasarkan judul atau kata kunci..."
                     class="w-full px-6 py-4 border border-slate-300 focus:border-amber-600 focus:ring-1 focus:ring-amber-600 transition-all text-slate-900 placeholder-slate-400"
                     style="font-family: 'Montserrat', sans-serif;">
                 <svg class="absolute right-4 top-4 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -28,7 +28,7 @@
                     wire:click="clearFilter"
                     class="px-6 py-2.5 border transition-all duration-200 {{ !$selectedCategory ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-300 hover:border-slate-900' }}"
                     style="font-family: 'Montserrat', sans-serif; font-size: 0.875rem; letter-spacing: 0.025em;">
-                    All Positions
+                    Semua Posisi
                 </button>
                 @foreach($categories as $category)
                 <button 
@@ -55,7 +55,7 @@
                     </span>
                     @if($job->is_urgent)
                     <span class="bg-amber-100 text-amber-800 px-3 py-1.5 text-xs font-bold tracking-wider uppercase border border-amber-300" style="font-family: 'Montserrat', sans-serif;">
-                        Urgent
+                        Mendesak
                     </span>
                     @endif
                 </div>
@@ -85,7 +85,7 @@
                         <svg class="w-4 h-4 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
-                        <span class="text-xs uppercase tracking-wide">Closes {{ $job->closed_at->format('d M Y') }}</span>
+                        <span class="text-xs uppercase tracking-wide">Ditutup {{ $job->closed_at->format('d M Y') }}</span>
                     </div>
                     @endif
                 </div>
@@ -96,8 +96,8 @@
                 <svg class="w-16 h-16 mx-auto text-slate-300 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                 </svg>
-                <p class="text-xl text-slate-500 font-light" style="font-family: 'Montserrat', sans-serif;">No Positions Available</p>
-                <p class="text-sm text-slate-400 mt-2" style="font-family: 'Montserrat', sans-serif;">Please adjust your search criteria</p>
+                <p class="text-xl text-slate-500 font-light" style="font-family: 'Montserrat', sans-serif;">Tidak Ada Posisi Tersedia</p>
+                <p class="text-sm text-slate-400 mt-2" style="font-family: 'Montserrat', sans-serif;">Silakan sesuaikan kriteria pencarian Anda</p>
             </div>
             @endforelse
         </div>

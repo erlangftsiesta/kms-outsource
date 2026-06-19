@@ -24,7 +24,7 @@ new class extends Component
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('home') }}" wire:navigate class="flex items-center space-x-3 group">
-                        <x-application-logo class="block h-10 w-auto fill-current text-slate-800 group-hover:text-amber-600 transition-colors duration-300" />
+                        <img src="{{ asset('image/logo.jpeg') }}" alt="Logo" class="block h-20 w-auto transition-transform duration-300 group-hover:scale-105" />
                     </a>
                 </div>
 
@@ -35,20 +35,20 @@ new class extends Component
                             {{ __('Dashboard') }}
                         </x-nav-link>
                         <x-nav-link :href="route('admin.jobs.index')" :active="request()->routeIs('admin.jobs.*')" wire:navigate class="px-4 py-2 text-sm font-light tracking-wide text-slate-700 hover:text-amber-600 transition-colors duration-300 {{ request()->routeIs('admin.jobs.*') ? 'text-amber-600 font-medium' : '' }}">
-                            {{ __('Jobs') }}
+                            {{ __('Lowongan') }}
                         </x-nav-link>
                                                 <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.*')" wire:navigate class="px-4 py-2 text-sm font-light tracking-wide text-slate-700 hover:text-amber-600 transition-colors duration-300 {{ request()->routeIs('admin.categories.*') ? 'text-amber-600 font-medium' : '' }}">
-                            {{ __('Categories') }}
+                            {{ __('Kategori') }}
                         </x-nav-link>
                     @else
                         <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate class="px-4 py-2 text-sm font-light tracking-wide text-slate-700 hover:text-amber-600 transition-colors duration-300 {{ request()->routeIs('home') ? 'text-amber-600 font-medium' : '' }}">
-                            {{ __('Home') }}
+                            {{ __('Beranda') }}
                         </x-nav-link>
                         <x-nav-link :href="route('about')" :active="request()->routeIs('about')" wire:navigate class="px-4 py-2 text-sm font-light tracking-wide text-slate-700 hover:text-amber-600 transition-colors duration-300 {{ request()->routeIs('about') ? 'text-amber-600 font-medium' : '' }}">
-                            {{ __('About') }}
+                            {{ __('Tentang') }}
                         </x-nav-link>
                         <x-nav-link :href="route('career')" :active="request()->routeIs('career')" wire:navigate class="px-4 py-2 text-sm font-light tracking-wide text-slate-700 hover:text-amber-600 transition-colors duration-300 {{ request()->routeIs('career') ? 'text-amber-600 font-medium' : '' }}">
-                            {{ __('Career') }}
+                            {{ __('Karir') }}
                         </x-nav-link>
                     @endauth
                 </div>
@@ -72,13 +72,13 @@ new class extends Component
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile')" wire:navigate class="text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200">
-                            {{ __('Profile') }}
+                            {{ __('Profil') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
                         <button wire:click="logout" class="w-full text-start">
                             <x-dropdown-link class="text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200">
-                                {{ __('Log Out') }}
+                                {{ __('Keluar') }}
                             </x-dropdown-link>
                         </button>
                     </x-slot>
@@ -87,7 +87,7 @@ new class extends Component
             @else
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <a href="{{ route('login') }}" class="px-6 py-2 text-sm font-light tracking-wide text-slate-700 border border-slate-300 hover:border-amber-600 hover:text-amber-600 transition-all duration-300">
-                    Login
+                    Masuk
                 </a>
             </div>
             @endauth
@@ -112,17 +112,20 @@ new class extends Component
                     {{ __('Dashboard') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('admin.jobs.index')" :active="request()->routeIs('admin.jobs.*')" wire:navigate class="block px-4 py-3 text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200 {{ request()->routeIs('admin.jobs.*') ? 'bg-slate-50 text-amber-600 font-medium border-l-2 border-amber-600' : '' }}">
-                    {{ __('Jobs') }}
+                    {{ __('Lowongan') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.*')" wire:navigate class="block px-4 py-3 text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200 {{ request()->routeIs('admin.categories.*') ? 'bg-slate-50 text-amber-600 font-medium border-l-2 border-amber-600' : '' }}">
+                    {{ __('Kategori') }}
                 </x-responsive-nav-link>
             @else
                 <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate class="block px-4 py-3 text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200 {{ request()->routeIs('home') ? 'bg-slate-50 text-amber-600 font-medium border-l-2 border-amber-600' : '' }}">
-                    {{ __('Home') }}
+                    {{ __('Beranda') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')" wire:navigate class="block px-4 py-3 text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200 {{ request()->routeIs('about') ? 'bg-slate-50 text-amber-600 font-medium border-l-2 border-amber-600' : '' }}">
-                    {{ __('About') }}
+                    {{ __('Tentang') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('career')" :active="request()->routeIs('career')" wire:navigate class="block px-4 py-3 text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200 {{ request()->routeIs('career') ? 'bg-slate-50 text-amber-600 font-medium border-l-2 border-amber-600' : '' }}">
-                    {{ __('Career') }}
+                    {{ __('Karir') }}
                 </x-responsive-nav-link>
             @endauth
         </div>
@@ -137,13 +140,13 @@ new class extends Component
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile')" wire:navigate class="block px-4 py-3 text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200">
-                    {{ __('Profile') }}
+                    {{ __('Profil') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
                 <button wire:click="logout" class="w-full text-start">
                     <x-responsive-nav-link class="block px-4 py-3 text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200">
-                        {{ __('Log Out') }}
+                        {{ __('Keluar') }}
                     </x-responsive-nav-link>
                 </button>
             </div>
@@ -152,7 +155,7 @@ new class extends Component
         <div class="pt-4 pb-1 border-t border-slate-200">
             <div class="px-4">
                 <x-responsive-nav-link :href="route('login')" wire:navigate class="block px-4 py-3 text-sm font-light tracking-wide text-slate-700 hover:bg-slate-50 hover:text-amber-600 transition-colors duration-200">
-                    {{ __('Login') }}
+                    {{ __('Masuk') }}
                 </x-responsive-nav-link>
             </div>
         </div>

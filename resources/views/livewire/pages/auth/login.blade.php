@@ -32,7 +32,7 @@ new #[Layout('layouts.guest')] class extends Component
             <div class="space-y-4">
                 <a href="/" wire:navigate class="inline-block">
                     <h1 class="text-3xl font-bold text-slate-900" style="font-weight: 600; letter-spacing: -0.5px;">
-                        TalentPro
+                        PT Kencana Megah Semesta
                     </h1>
                 </a>
                 <div class="space-y-2">

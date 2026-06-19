@@ -5,19 +5,19 @@
         
         <div class="relative z-10 max-w-5xl mx-auto text-center px-6">
             <div class="inline-block mb-6">
-                <span class="text-amber-400 text-sm font-semibold tracking-[0.3em] uppercase">Excellence in Recruitment</span>
+                <span class="text-amber-400 text-sm font-semibold tracking-[0.3em] uppercase">Keunggulan dalam Rekrutmen</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
-                Transform Your Business<br/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">with Top Talent</span>
+                Transformasi Bisnis Anda<br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">dengan Bakat Terbaik</span>
             </h1>
             <p class="text-xl md:text-2xl text-slate-300 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
-                Strategic workforce solutions for forward-thinking organizations
+                Solusi tenaga kerja strategis untuk organisasi yang visioner
             </p>
             <a href="/career" 
                wire:navigate
                class="inline-flex items-center gap-3 bg-amber-400 text-slate-900 px-10 py-4 rounded-none font-semibold hover:bg-amber-300 transition-all duration-300 uppercase tracking-wider text-sm">
-                Explore Opportunities
+                Jelajahi Lowongan
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
@@ -35,12 +35,12 @@
     <section class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-20">
-                <span class="text-amber-500 text-sm font-semibold tracking-[0.3em] uppercase mb-4 block">Our Expertise</span>
+                <span class="text-amber-500 text-sm font-semibold tracking-[0.3em] uppercase mb-4 block">Keahlian Kami</span>
                 <h2 class="text-5xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                    Comprehensive Talent Solutions
+                    Solusi Bakat Komprehensif
                 </h2>
                 <p class="text-xl text-slate-600 font-light leading-relaxed">
-                    Connecting exceptional professionals with organizations across multiple industries
+                    Menghubungkan profesional luar biasa dengan organisasi di berbagai industri
                 </p>
             </div>
 
@@ -56,11 +56,11 @@
         </h3>
         <p class="text-gray-400 mb-4">{{ $category->description }}</p>
         <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-500">{{ $category->active_jobs_count }} open positions</span>
+            <span class="text-sm text-gray-500">{{ $category->active_jobs_count }} lowongan terbuka</span>
             <a href="/career?category={{ $category->id }}" 
                wire:navigate
                class="text-amber-400 font-semibold hover:text-amber-700 flex items-center group-hover:translate-x-2 transition">
-                View Jobs
+                Lihat Pekerjaan
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                 </svg>
@@ -79,13 +79,13 @@
             <div class="max-w-3xl mb-20">
                 <div class="flex items-center gap-3 mb-4">
                     <span class="inline-block h-px w-12 bg-amber-400"></span>
-                    <span class="text-amber-400 text-sm font-semibold tracking-[0.3em] uppercase">Immediate Openings</span>
+                    <span class="text-amber-400 text-sm font-semibold tracking-[0.3em] uppercase">Lowongan Segera</span>
                 </div>
                 <h2 class="text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
-                    Priority Positions
+                    Posisi Prioritas
                 </h2>
                 <p class="text-xl text-slate-400 font-light leading-relaxed">
-                    Exclusive opportunities available now
+                    Peluang eksklusif tersedia sekarang
                 </p>
             </div>
 
@@ -99,7 +99,7 @@
                             {{ $job->category->name }}
                         </span>
                         <span class="bg-amber-400 text-slate-900 px-3 py-1 text-xs font-bold uppercase tracking-wider">
-                            Urgent
+                            Mendesak
                         </span>
                     </div>
                     
@@ -134,18 +134,18 @@
     <section class="py-32 bg-white">
         <div class="max-w-4xl mx-auto text-center px-6">
             <div class="inline-block mb-6">
-                <span class="text-amber-500 text-sm font-semibold tracking-[0.3em] uppercase">Join Us</span>
+                <span class="text-amber-500 text-sm font-semibold tracking-[0.3em] uppercase">Bergabunglah Bersama Kami</span>
             </div>
             <h2 class="text-5xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                Ready to Elevate Your Career?
+                Siap Meningkatkan Karir Anda?
             </h2>
             <p class="text-xl text-slate-600 mb-12 font-light leading-relaxed max-w-2xl mx-auto">
-                Join hundreds of professionals who've found their perfect role through our platform
+                Bergabunglah dengan ratusan profesional yang telah menemukan peran sempurna mereka melalui platform kami
             </p>
             <a href="/career" 
                wire:navigate
                class="inline-flex items-center gap-3 bg-slate-900 text-white px-10 py-4 rounded-none font-semibold hover:bg-slate-800 transition-all duration-300 uppercase tracking-wider text-sm">
-                Browse All Positions
+                Jelajahi Semua Posisi
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
